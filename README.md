@@ -206,7 +206,7 @@ JSONPlaceholder API
 
 ## 👨‍💻 Auteur
 
-**Zied Hannachi**  
+**Arij Bayoudh**  
 QA Tech Lead | Test Automation | Playwright | CI/CD
 
 ---
