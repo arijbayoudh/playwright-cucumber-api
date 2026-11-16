@@ -1,0 +1,27 @@
+image: node:20
+
+stages:
+  - test
+
+variables:
+  NODE_ENV: test
+
+cache:
+  paths:
+    - node_modules/
+
+before_script:
+  - npm ci
+
+api_tests:
+  stage: test
+  script:
+    - npx cucumber-js
+    - npx cucumber-html-reporter \
+        --jsonFile=reports/cucumber-report.json \
+        --output=reports/cucumber-report.html
+  artifacts:
+    when: always
+    paths:
+      - reports/
+    expire_in: 7 days
